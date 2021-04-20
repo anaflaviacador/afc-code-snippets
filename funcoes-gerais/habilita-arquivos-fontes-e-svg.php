@@ -4,8 +4,10 @@ function afc_add_fonts_to_allowed_mimes( $mimes = array() ) {
 	$mimes['woff']  = 'application/x-font-woff';
 	$mimes['woff2'] = 'application/x-font-woff2';
 	$mimes['svg']  = 'image/svg+xml';
-  $mimes['svgz'] = 'image/svg+xml';
-	// $mimes['woff']  = 'font/woff';
+    $mimes['svgz'] = 'image/svg+xml';
+	
+    // era para ser esses abaixo, mas o WP nao atualizou o core
+    // $mimes['woff']  = 'font/woff'; 
 	// $mimes['woff2'] = 'font/woff2';
 	return $mimes;
 } add_filter( 'upload_mimes', 'afc_add_fonts_to_allowed_mimes');
